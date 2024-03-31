@@ -1,0 +1,40 @@
+// Основные настройки страницы
+html {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  color: var(--neutral-color-100);
+  background-color: var(--neutral-color-10);
+
+  &--fixed {
+    overflow-y: hidden;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+// Настройки стандартного контейнера
+.container {
+  margin: 0 auto; // Контейнер по центру
+  padding: 0 var(--container-padding); // Отступы от окна браузера слева и справа
+  height: 100%; // Высота 100% высоты родителя
+  max-width: calc(
+    var(--container-width) + (var(--container-padding) * 2)
+  ); // Ширина контейнера + отступы слева и справа
+}
+
+.hidden {
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+}
