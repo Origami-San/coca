@@ -1,0 +1,5 @@
+@import './mixins/index';
+
+header {
+  @include flex-all-center;
+}
