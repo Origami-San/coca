@@ -1,5 +1,51 @@
-// Основные настройки страницы
+// Reset
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+// General
 html {
+  box-sizing: border-box;
   font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -8,7 +54,7 @@ html {
 
 body {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; // Скрываем все что вне блока по оси Х
   color: var(--neutral-color-100);
   background-color: var(--neutral-color-10);
 
@@ -23,7 +69,7 @@ img {
   object-fit: cover;
 }
 
-// Настройки стандартного контейнера
+// Main
 .container {
   margin: 0 auto; // Контейнер по центру
   padding: 0 var(--container-padding); // Отступы от окна браузера слева и справа
@@ -33,6 +79,7 @@ img {
   ); // Ширина контейнера + отступы слева и справа
 }
 
+// Скрываеи элемент страницы оставляя доступным для screen reader
 .hidden {
   font-size: 0;
   opacity: 0;
