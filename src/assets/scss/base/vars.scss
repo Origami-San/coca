@@ -2,6 +2,7 @@
   // Neutral Colors
   --neutral-color-10: #fff;
   --neutral-color-20: #f5f5f5;
+  --neutral-color-40: #ced1d8;
   --neutral-color-60: #18181d;
   --neutral-color-100: #1d1e25;
   --neutral-color-120: #828282;
@@ -15,14 +16,22 @@
   // Primary Color
   --primary-color-50: #4e7ddb;
 
+  // Success colors
+  --success-colors-70: #e2f8f0b3;
+
   // Container
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mobile {
+    --container-width: 380px;
+  }
 
   // Transition
   --transition: 0.2s ease-in-out;
 
   // Z-index
+  --z-index-0: -1;
   --z-index-1: 1;
   --z-index-2: 2;
   --z-index-3: 3;
@@ -38,4 +47,7 @@
   // Logo Colors
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
+
+  // Success colors
+  --success-colors-70: #e2f8f033;
 }

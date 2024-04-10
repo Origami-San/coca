@@ -52,12 +52,13 @@ html {
   scroll-behavior: smooth !important;
 }
 
-body {
-  position: relative;
+.body {
+  // position: relative;
   overflow-x: hidden; // Скрываем все что вне блока по оси Х
   color: var(--neutral-color-100);
   background-color: var(--neutral-color-10);
 
+  // Запрет скролла при открытом burger-меню
   &--fixed {
     overflow-y: hidden;
   }
