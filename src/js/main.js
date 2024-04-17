@@ -9,3 +9,6 @@ useBurger();
 
 import { useHeader } from './components/header.js';
 useHeader();
+
+import { useSlider } from './components/slider.js';
+useSlider();
