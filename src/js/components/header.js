@@ -3,30 +3,26 @@ export const useHeader = () => {
   const heroSection = document.querySelector('.hero');
   const headerHeight = header.offsetHeight;
   let lastScrollTop = 0;
+  // Задем отступ от .hero т.к. .header выпадает изи потока
+  heroSection.style.marginTop = `${headerHeight}px`;
 
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
-
-    if (scrollDistance > lastScrollTop) {
-      MakeItNotFixed();
-    } else {
-      MakeItFixed();
-    }
-
-    if (scrollDistance === 0) {
-      MakeItNotFixed();
-    }
-
-    function MakeItNotFixed() {
-      header.classList.remove('header--fixed');
-      header.classList.remove('header--show');
-      heroSection.style.marginTop = null;
-    }
-
-    function MakeItFixed() {
-      header.classList.add('header--fixed');
+    // Добавляем класс header--show и header--background-transparent когда .header находится в самом верху страницы
+    if (scrollDistance <= headerHeight) {
       header.classList.add('header--show');
-      heroSection.style.marginTop = `${headerHeight}px`;
+      header.classList.add('header--background-transparent');
+      // Добавляем класс header--fixed при прокрутке вниз, при условии что мы прокрутили больше высоты headerHeight
+    } else if (scrollDistance > lastScrollTop && scrollDistance > headerHeight) {
+      header.classList.remove('header--show');
+      header.classList.add('header--fixed');
+      header.classList.remove('header--background-transparent');
+
+      // Добавляем класс header--show и header--fixed при прокрутке вверх
+    } else if (scrollDistance < lastScrollTop && scrollDistance > headerHeight) {
+      header.classList.add('header--show');
+      header.classList.add('header--fixed');
+      header.classList.remove('header--background-transparent');
     }
 
     lastScrollTop = scrollDistance;

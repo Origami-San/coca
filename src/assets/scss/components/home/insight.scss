@@ -6,6 +6,11 @@
 
     @include mobile {
       padding-top: 80px;
+      padding-bottom: 61px;
+    }
+
+    @include small-mobile {
+      padding-bottom: 41px;
     }
   }
 

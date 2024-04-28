@@ -10,5 +10,10 @@ useBurger();
 import { useHeader } from './components/header.js';
 useHeader();
 
-import { useSlider } from './components/slider.js';
+import { useSlider, useTestimonialsSlider, usePartnersSlider } from './components/home/slider.js';
 useSlider();
+useTestimonialsSlider();
+usePartnersSlider();
+
+import { useAccordion } from './components/home/accordion.js';
+useAccordion();
