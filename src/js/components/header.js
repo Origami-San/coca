@@ -4,7 +4,8 @@ export const useHeader = () => {
   const headerHeight = header.offsetHeight;
   let lastScrollTop = 0;
   // Задем отступ от .hero т.к. .header выпадает изи потока
-  heroSection.style.marginTop = `${headerHeight}px`;
+  // heroSection.style.marginTop = `${headerHeight}px`;
+  document.body.style.marginTop = `${headerHeight}px`;
 
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;

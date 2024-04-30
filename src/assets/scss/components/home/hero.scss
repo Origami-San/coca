@@ -1,6 +1,5 @@
 .hero {
   // overflow-x: hidden; // Fix для Google Chrome при адаптиве
-  position: relative;
   padding: 87px 0 141px;
 
   @include mini-desktop {
@@ -9,58 +8,6 @@
 
   @include mobile {
     min-height: calc(100dvh - 128px);
-  }
-
-  &::before {
-    top: 50px;
-    left: 181px;
-    width: 551px;
-    height: 551px;
-    background-color: #fa7515;
-    opacity: 0.13;
-    filter: blur(220px);
-
-    @include mini-desktop {
-      left: 80px;
-      width: 351px;
-      height: 351px;
-    }
-
-    @include small-tablet {
-      top: 20px;
-      left: 40px;
-      width: 251px;
-      height: 251px;
-    }
-  }
-
-  &::after {
-    right: 0;
-    bottom: 0;
-    width: 525px;
-    height: 525px;
-    background-color: var(--success-colors-70);
-    filter: blur(180px);
-
-    @include mini-desktop {
-      width: 325px;
-      height: 325px;
-    }
-
-    @include small-tablet {
-      width: 225px;
-      height: 225px;
-    }
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: var(--z-index-0);
-    border-radius: 50%;
-
-    // display: inline-block;
   }
 
   &__container {
