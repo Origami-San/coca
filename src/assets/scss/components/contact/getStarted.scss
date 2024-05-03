@@ -1,0 +1,131 @@
+.get-started {
+  padding: 76px 0 160px;
+
+  @include small-tablet {
+    padding: 60px 0 80px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+    max-width: 1440px;
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+
+    @include small-tablet {
+      position: inherit;
+      justify-content: center;
+      padding: 0;
+    }
+  }
+
+  &__form {
+    &-wrapper {
+      position: absolute;
+      left: 8%;
+      border: 1px solid var(--neutral-color-40);
+      padding: 58px 46px;
+      background-color: #fff;
+
+      @include tablet {
+        left: var(--container-padding);
+      }
+
+      @include small-tablet {
+        position: inherit;
+      }
+
+      @include small-mobile {
+        padding: 20px 15px;
+      }
+    }
+
+    &-img {
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: #1d1e25;
+    }
+
+    &-text {
+      margin-bottom: 48px;
+      font-weight: 400;
+      line-height: 1.66;
+      color: var(--neutral-color-150);
+
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-top {
+      @include flex-align-center-between;
+      gap: 12px;
+
+      @include small-tablet {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &-link {
+      font-weight: 500;
+      color: var(--primary-color-30);
+    }
+
+    &-lable {
+      @include flex-column;
+      gap: 6px;
+      margin-bottom: 24px;
+      width: 100%;
+
+      &-text {
+        font-weight: 500;
+        line-height: 1.43;
+        color: #1d1e25;
+      }
+    }
+
+    &-input {
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 8px;
+      padding: 10px 14px;
+      width: 100%;
+      font-weight: 400;
+      line-height: 1.72;
+      color: #7e8492;
+
+      &--small {
+        max-width: 240px;
+
+        @include small-tablet {
+          max-width: none;
+        }
+      }
+
+      &--textarea {
+        outline: none;
+        height: 134px;
+        resize: none;
+      }
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      color: #fff;
+      background: #1d1e25;
+    }
+  }
+}

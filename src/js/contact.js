@@ -15,3 +15,6 @@ useMap();
 
 import { usePartnersSlider } from './components/home/slider.js';
 usePartnersSlider();
+
+import { usePhone } from './components/contact/phone.js';
+usePhone();
