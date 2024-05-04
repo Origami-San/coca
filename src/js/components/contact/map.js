@@ -6753,7 +6753,7 @@ export const useMap = () => {
     // Создание маркера
     const el = document.createElement('img');
     el.className = 'my-marker';
-    el.src = '../assets/icons/map/pin.svg';
+    el.src = './assets/icons/map/pin.svg';
     el.title = 'Маркер';
     // При клике на маркер меняем центр карты на LOCATION с заданным duration
     // el.onclick = () => map.update({ location: { ...LOCATION, duration: 400 } });
