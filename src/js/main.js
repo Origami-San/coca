@@ -1,4 +1,4 @@
-import '../assets/scss/main.scss';
+import '/scss/main.scss';
 
 // Components
 import { useTheme } from './components/theme.js';
