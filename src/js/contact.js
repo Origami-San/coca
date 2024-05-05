@@ -16,9 +16,9 @@ useMap();
 import { usePartnersSlider } from './components/home/slider.js';
 usePartnersSlider();
 
-import { usePhone } from './components/contact/phone.js';
-usePhone();
-// usePhoneMask();
+import { usePhoneMask } from './components/contact/phone.js';
+// usePhone();
+usePhoneMask();
 
 // import { formValidator } from './components/contact/formValidator.js';
 // formValidator();

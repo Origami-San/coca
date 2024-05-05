@@ -23,12 +23,12 @@ export const usePhoneMask = () => {
     utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/22.0.2/js/utils.js', // Путь к файлу utils.js из пакета intl-tel-input
     separateDialCode: true, // Разделять код страны и номер телефона
     nationalMode: false, // Использовать национальный режим (показывать только маску номера для выбранной страны)
-    formatOnDisplay: true, // Форматировать номер при отображении
+    // formatOnDisplay: true, // Форматировать номер при отображении
     // preferredCountries: ['us', 'gb'], // Предпочтительные страны
     onlyCountries: ['us', 'gb', 'ru'], // Доступные страны для выбора
-    placeholderNumberType: 'MOBILE', // Тип мобильного номера для заполнения маски
-    autoPlaceholder: 'aggressive', // Автоматическое заполнение маски
-    initialCountry: 'auto', // 'auto' - Автоматическое определение страны
+    // placeholderNumberType: 'MOBILE', // Тип мобильного номера для заполнения маски
+    // autoPlaceholder: 'aggressive', // Автоматическое заполнение маски
+    initialCountry: 'ru', // 'auto' - Автоматическое определение страны
     geoIpLookup: (callback) => {
       fetch('https://ipapi.co/json')
         .then((res) => res.json())

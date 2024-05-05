@@ -94,8 +94,12 @@
   width: 40px;
   height: 80px;
   background-color: #fff;
-  transition: 0.8s;
-  transition-delay: 0.25s;
+
+  // Анимация def:0.8
+  transition: 0.3s;
+
+  // Задержка анимации def:0.25
+  transition-delay: 0.1s;
 
   @include mini-desktop {
     top: 100px;
@@ -114,9 +118,12 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    transition: 1.2s;
+
+    // def:1.2
+    transition: 0.4s;
 
     path {
+      // def:1
       transition: 1s;
     }
   }
