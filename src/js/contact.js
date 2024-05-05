@@ -18,3 +18,7 @@ usePartnersSlider();
 
 import { usePhone } from './components/contact/phone.js';
 usePhone();
+// usePhoneMask();
+
+// import { formValidator } from './components/contact/formValidator.js';
+// formValidator();

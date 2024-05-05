@@ -1,3 +1,9 @@
+// import './assets/icons/map/pin.svg';
+// import './src/assets/icons/map/pin.svg';
+// import '/assets/icons/map/pin.svg';
+
+import pinIcon from '/assets/icons/map/pin.svg';
+
 export const useMap = () => {
   window.map = null;
 
@@ -6753,7 +6759,8 @@ export const useMap = () => {
     // Создание маркера
     const el = document.createElement('img');
     el.className = 'my-marker';
-    el.src = './assets/icons/map/pin.svg';
+    // el.src = './assets/icons/map/pin.svg';
+    el.src = pinIcon;
     el.title = 'Маркер';
     // При клике на маркер меняем центр карты на LOCATION с заданным duration
     // el.onclick = () => map.update({ location: { ...LOCATION, duration: 400 } });
