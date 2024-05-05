@@ -1,7 +1,3 @@
-// import './assets/icons/map/pin.svg';
-// import './src/assets/icons/map/pin.svg';
-// import '/assets/icons/map/pin.svg';
-
 import pinIcon from '/assets/icons/map/pin.svg';
 
 export const useMap = () => {
