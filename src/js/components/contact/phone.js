@@ -1,4 +1,4 @@
-import Inputmask from 'Inputmask';
+import Inputmask from 'inputmask';
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/css/intlTelInput.css';
 
