@@ -16,9 +16,11 @@ useMap();
 import { usePartnersSlider } from './components/home/slider.js';
 usePartnersSlider();
 
-import { usePhoneMask } from './components/contact/phone.js';
-// usePhone();
-usePhoneMask();
+import { useTestInputMask } from './components/contact/phone.js';
+// useIntlTelInput();
+// usePhoneMask();
+//useIntlTelInputMask();
+useTestInputMask();
 
 // import { formValidator } from './components/contact/formValidator.js';
 // formValidator();
