@@ -15,6 +15,7 @@
             <input
               class="get-started__form-input get-started__form-input--small"
               type="text"
+              id="firstName"
               name="first-name"
               placeholder="First name"
               required
@@ -25,6 +26,7 @@
             <input
               class="get-started__form-input get-started__form-input--small"
               type="text"
+              id="lastName"
               name="last-name"
               placeholder="Last name"
               required
@@ -37,8 +39,8 @@
             class="get-started__form-input"
             type="email"
             name="email"
+            id="email"
             placeholder="you@company.com"
-            required
           />
         </label>
         <label class="get-started__form-lable text-p-small">
@@ -48,18 +50,18 @@
             class="get-started__form-input"
             type="tel"
             name="tel"
-            data-validate-field="name"
             placeholder=""
+            required
           />
         </label>
         <label class="get-started__form-lable text-p-small">
           <span class="get-started__form-lable-text">Message</span>
           <textarea
+            id="message"
             class="get-started__form-input get-started__form-input--textarea"
             type="text"
             name="message"
             placeholder="Leave us a message..."
-            required
           ></textarea>
         </label>
         <button class="get-started__form-btn button-form text-p-default">Get Started</button>
