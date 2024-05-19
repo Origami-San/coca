@@ -1,6 +1,45 @@
 .hero {
   padding: 90px 0 78px;
 
+  &__container {
+    &-bottom {
+      padding-top: 130px;
+      padding-bottom: 130px;
+      max-width: 1440px;
+      padding-right: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 32px;
+      padding-left: clamp(15px, 0px, calc((100% - 1440px) / 2));
+      //padding-left: max(15px, calc((100% - 1440px) / 2));
+
+      .content {
+        &_1 {
+          max-width: 502px;
+          //width: 100%;
+          // height: 629px;
+          // width: 502px;
+          // margin-left: 110px;
+        }
+        &_2 {
+          //background-color: aqua;
+          max-width: 502px;
+          //width: 100%;
+          // height: 629px;
+          // width: 502px;
+          //flex-shrink: 0;
+        }
+        &_3 {
+          max-width: 252px;
+          //width: 100%;
+          // height: 460px;
+          // width: 252px;
+          //overflow: hidden;
+        }
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 118px;
     max-width: 959px;
@@ -10,8 +49,8 @@
     color: var(--neutral-color-100);
 
     @include small-tablet {
-      text-align: center;
       margin-bottom: 80px;
+      text-align: center;
     }
   }
 
@@ -28,9 +67,9 @@
       }
 
       @include small-tablet {
+        gap: 50px;
         flex-direction: column;
         text-align: center;
-        gap: 50px;
       }
     }
   }
@@ -65,6 +104,11 @@
         transform-origin: 0 63px; // Размер круга 126px делить на 2
       }
     }
+
+    &-link {
+      position: absolute;
+      inset: 0;
+    }
   }
 }
 
@@ -78,8 +122,27 @@
   }
 }
 
+// Корректировака линии
 .text-p-subtitle {
   &::before {
     transform: translateY(-84px);
   }
 }
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0;
+  padding-left: max(15px, calc(100% - 1200px) / 2);
+  margin: 0 auto;
+  //max-width: 1440px;
+}
+
+.hero__content {
+  background-color: aqua;
+  width: 100%;
+}
+
+// https://www.youtube.com/watch?v=NVdlfhkDAGM
+// https://www.youtube.com/watch?v=l4sxzymT4S8
