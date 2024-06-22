@@ -1,0 +1,32 @@
+.slogan {
+  &__container {
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    padding: 87px 0 85px;
+  }
+
+  &__wrapper {
+    @include flex-align-center-between;
+
+    @include tablet {
+      gap: 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    max-width: 480px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__deskr {
+    max-width: 470px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--neutral-color-100);
+  }
+}
