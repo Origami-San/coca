@@ -1,42 +1,15 @@
 .hero {
-  padding: 90px 0 78px;
+  padding: 105px 0 160px;
 
-  &__container {
-    &-bottom {
-      padding-top: 130px;
-      padding-bottom: 130px;
-      max-width: 1440px;
-      padding-right: 0;
-      display: flex;
-      justify-content: flex-end;
-      gap: 32px;
-      padding-left: clamp(15px, 0px, calc((100% - 1440px) / 2));
-      //padding-left: max(15px, calc((100% - 1440px) / 2));
+  &-decor {
+    &::before {
+      top: 1186px;
+      left: 21px;
+      filter: blur(100px);
+    }
 
-      .content {
-        &_1 {
-          max-width: 502px;
-          //width: 100%;
-          // height: 629px;
-          // width: 502px;
-          // margin-left: 110px;
-        }
-        &_2 {
-          //background-color: aqua;
-          max-width: 502px;
-          //width: 100%;
-          // height: 629px;
-          // width: 502px;
-          //flex-shrink: 0;
-        }
-        &_3 {
-          max-width: 252px;
-          //width: 100%;
-          // height: 460px;
-          // width: 252px;
-          //overflow: hidden;
-        }
-      }
+    &::after {
+      display: none;
     }
   }
 
@@ -110,6 +83,143 @@
       inset: 0;
     }
   }
+
+  &__slider {
+    // Задаем ширину слайдера до экрана 1440px-120px = 1320px
+    width: 1320px;
+    position: relative;
+
+    // Ограничиваем ширину слайдера до экрана менее 768px до 992px
+    @include small-tablet {
+      width: 992px;
+    }
+
+    // Убираем ширину на маленьких экранах
+    @include small-mobile {
+      width: 100%;
+    }
+
+    &-container {
+      overflow: hidden;
+      margin-top: 135px;
+    }
+  }
+
+  &__slide {
+    max-width: 502px;
+    max-height: 630px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &-title {
+      margin-top: 24px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      display: -webkit-box; /* Включаем флексбоксы */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+      margin-top: 8px;
+      font-weight: 500;
+      line-height: 1.78;
+      color: var(--neutral-color-150);
+      -webkit-box-orient: vertical; /* Вертикальная ориентация */
+      -webkit-line-clamp: 3; /* Число отображаемых строк */
+    }
+
+    &-btn {
+      display: inline-block;
+      margin-top: 25px;
+      border-radius: 100px;
+      padding: 16px 32px;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      color: var(--neutral-color-10);
+      background: var(--neutral-color-100);
+      transition: var(--transition);
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.about__btn--prev,
+.about__btn--next {
+  position: absolute;
+  top: 99px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100px;
+  background-color: #fff;
+
+  transition: all 0.9s;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    path {
+      stroke: #1d1e25;
+    }
+  }
+
+  &:hover {
+    background-color: #7e8492;
+  }
+
+  &:hover svg {
+    transition-timing-function: ease-in-out;
+
+    path {
+      stroke: #fff;
+    }
+  }
+}
+
+.about__btn--prev {
+  right: 61%;
+  border-radius: 100px 0 0 100px;
+
+  @include small-tablet {
+    right: 50%;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  svg {
+    right: 5px;
+  }
+}
+
+.about__btn--next {
+  left: 38.9%;
+  border-radius: 0 100px 100px 0;
+
+  @include small-tablet {
+    left: 50%;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  svg {
+    left: 5px;
+  }
 }
 
 @keyframes anim {
@@ -128,21 +238,3 @@
     transform: translateY(-84px);
   }
 }
-
-.content {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 0;
-  padding-left: max(15px, calc(100% - 1200px) / 2);
-  margin: 0 auto;
-  //max-width: 1440px;
-}
-
-.hero__content {
-  background-color: aqua;
-  width: 100%;
-}
-
-// https://www.youtube.com/watch?v=NVdlfhkDAGM
-// https://www.youtube.com/watch?v=l4sxzymT4S8

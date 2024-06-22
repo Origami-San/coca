@@ -1,23 +1,41 @@
 // import Swiper JS
 import Swiper from 'swiper';
 // import Swiper JS Modules
-import { EffectFade, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 // import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-fade';
 
 export const useAboutSlider = () => {
-  new Swiper('.testimonials__sliders', {
+  new Swiper('.hero__slider', {
     // Swiper to use modules
-    modules: [EffectFade, Navigation],
+    modules: [Navigation],
     // Configure Swiper
-    slidesPerView: 'auto',
-    spaceBetween: 22,
-    effect: 'fade',
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      381: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+      },
+
+      992: {
+        slidesPerView: 2.8,
+        spaceBetween: 15,
+        loop: true,
+      },
+
+      1201: {
+        slidesPerView: 'auto',
+        spaceBetween: 32,
+        loop: true,
+      },
+    },
     // Navigation arrows
     navigation: {
-      nextEl: '.testimonials__btn--next',
-      prevEl: '.testimonials__btn--prev',
+      nextEl: '.about__btn--next',
+      prevEl: '.about__btn--prev',
     },
   });
 };
