@@ -13,5 +13,6 @@ useHeader();
 import { useTextAnimation } from './components/about/textAnimation.js';
 useTextAnimation();
 
-import { useAboutSlider } from './components/about/aboutSlider.js';
+import { useAboutSlider, useTeamSlider } from './components/about/aboutSlider.js';
 useAboutSlider();
+useTeamSlider();
