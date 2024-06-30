@@ -42,6 +42,7 @@
   // Container
   --container-padding: 15px;
   --container-width: 1200px;
+  --container-width-post: 940px;
 
   @include mini-desktop {
     --container-width: 1000px;
