@@ -59,7 +59,7 @@ html {
   background-color: var(--neutral-color-10);
 
   // Запрет скролла при открытом burger-меню
-  &--fixed {
+  &--fixet {
     overflow-y: hidden;
   }
 }
