@@ -12,3 +12,7 @@ useHeader();
 
 import { usePriceSwither } from './components/pricing/plans.js';
 usePriceSwither();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

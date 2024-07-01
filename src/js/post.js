@@ -9,3 +9,7 @@ useBurger();
 
 import { useHeader } from './components/header.js';
 useHeader();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

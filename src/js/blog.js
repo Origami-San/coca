@@ -16,3 +16,7 @@ useTabFilter();
 
 import { useArticlesSlider } from './components/blog/articlesSlider.js';
 useArticlesSlider();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

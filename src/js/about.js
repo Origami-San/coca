@@ -16,3 +16,7 @@ useTextAnimation();
 import { useAboutSlider, useTeamSlider } from './components/about/aboutSlider.js';
 useAboutSlider();
 useTeamSlider();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

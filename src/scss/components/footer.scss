@@ -58,8 +58,8 @@
 
   &__btn {
     padding: 16px 44px;
-    background: #fff;
     color: #1d1e25;
+    background: #fff;
 
     @include tablet {
       margin-top: 40px;
@@ -145,6 +145,8 @@
   // }
 
   &__item {
+    max-width: 143px;
+
     &-title {
       margin-bottom: 24px;
       font-weight: 700;
@@ -307,6 +309,11 @@
     overflow: hidden;
     max-height: 0;
     transition: all 0.3s;
+    margin-bottom: 0;
+  }
+
+  .footer__item {
+    position: relative;
   }
 
   .footer__item.open .footer__sublist {
@@ -315,5 +322,19 @@
 
   .footer__item-title {
     cursor: pointer;
+  }
+
+  .caret {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    transition: transform 0.3s;
+  }
+
+  .footer__item.open .caret {
+    transform: rotate(180deg);
   }
 }

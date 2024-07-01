@@ -15,5 +15,6 @@ useSlider();
 useTestimonialsSlider();
 usePartnersSlider();
 
-import { useAccordion } from './components/home/accordion.js';
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
 useAccordion();

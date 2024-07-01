@@ -39,8 +39,10 @@ export const useAccordion = () => {
         // Если список открыт, устанавливаем ему высоту равную его содержимому
         if (parentItem.classList.contains('open')) {
           sublist.style.maxHeight = sublist.scrollHeight + 'px';
+          sublist.style.marginBottom = '16px';
         } else {
           sublist.style.maxHeight = '0';
+          sublist.style.marginBottom = '0';
         }
       }
     });

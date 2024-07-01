@@ -24,3 +24,7 @@ useTestInputMask();
 
 // import { formValidator } from './components/contact/formValidator.js';
 // formValidator();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();
