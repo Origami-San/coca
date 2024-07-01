@@ -145,7 +145,7 @@
   // }
 
   &__item {
-    max-width: 143px;
+    max-width: 147px;
 
     &-title {
       margin-bottom: 24px;
@@ -155,7 +155,7 @@
     }
 
     @include mobile {
-      min-width: 143px;
+      min-width: 147px;
       text-align: center;
     }
   }
