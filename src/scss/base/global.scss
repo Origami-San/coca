@@ -61,6 +61,10 @@ html {
   // Запрет скролла при открытом burger-меню
   &--fixet {
     overflow-y: hidden;
+
+    .header {
+      background-color: transparent;
+    }
   }
 }
 
